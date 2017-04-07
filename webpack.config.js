@@ -16,10 +16,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {test: /\.js$/, loaders: ['react-hot', 'babel'], include: path.join(__dirname, 'src')}, 
+      {test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      //{est: /\.css$/, loaders: ['style-loader','css-loader?importLoaders=1','postcss-loader']}
+    ]
   }
 };
