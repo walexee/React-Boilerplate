@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AddContactButton = (props) => {
     if (props.showEditor) {
@@ -6,11 +7,6 @@ const AddContactButton = (props) => {
     }
 
     return <button onClick={props.addNewContact}>Add Contact</button>
-}
-
-AddContactButton.propTypes = {
-    showEditor: React.PropTypes.bool,
-    addNewContact: React.PropTypes.func.isRequired
 };
 
-export default AddContactButton
+export default AddContactButton;

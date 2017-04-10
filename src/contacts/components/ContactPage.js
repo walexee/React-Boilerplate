@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContactTable from './ContactTable';
 import AddContactButton from './AddContactButton';
 import ContactEditor from './ContactEditor';
@@ -19,15 +20,5 @@ const ContactPage = (props) => (
         <p><a href="/counter">See Counter</a></p>
     </div>
 );
-
-ContactPage.propTypes = {
-    contacts: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    contact: React.PropTypes.object,
-    showEditor: React.PropTypes.bool,
-    saveContact: React.PropTypes.func.isRequired,
-    addNewContact: React.PropTypes.func.isRequired,
-    editContact: React.PropTypes.func.isRequired,
-    removeContact: React.PropTypes.func.isRequired,
-};
 
 export default ContactPage;

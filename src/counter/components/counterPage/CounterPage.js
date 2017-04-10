@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../card/Card';
-//import logo from '../../../assets/logo.svg';
-//import './CounterPage.css';
+import logo from '../../../assets/logo.svg';
+import './CounterPage.css';
 
 class CounterPage extends Component {
   constructor(props) {
@@ -13,6 +13,7 @@ class CounterPage extends Component {
     this.stopCounters = this.stopCounters.bind(this);
     this.handleMultiplierChange = this.handleMultiplierChange.bind(this);
   }
+  
   name = <strong>Memeo</strong>;
 
   getName() {
@@ -55,7 +56,7 @@ class CounterPage extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
+          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React, {this.getName()}</h2>
         </div>
         <p className="App-intro">

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContactRow from './ContactRow';
 
 const ContactTable = (props) => (
@@ -24,11 +25,5 @@ const ContactTable = (props) => (
         </tbody>
     </table>
 )
-
-ContactTable.propTypes = {
-    contacts: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    editContact: React.PropTypes.func.isRequired,
-    removeContact: React.PropTypes.func.isRequired
-}
 
 export default ContactTable

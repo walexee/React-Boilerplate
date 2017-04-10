@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactRow = (props) => {
     if (!props.contact) {
@@ -14,12 +15,6 @@ const ContactRow = (props) => {
             <td><button onClick={props.removeContact}>Remove</button></td>
         </tr>
     );
-}
-
-ContactRow.propTypes = {
-    contact: React.PropTypes.object,
-    editContact: React.PropTypes.func.isRequired,
-    removeContact: React.PropTypes.func.isRequired
 }
 
 export default ContactRow;
